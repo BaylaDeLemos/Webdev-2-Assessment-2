@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!-- Boxicons -->
+    <link rel="stylesheet" href="style.css"> <!-- CSS -->
+    <title>Matcha Bliss | Login & Registration</title>
+</head>
+<body>
+    <!-- login and registration page for Matcha Bliss -->
+    <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>MATCHA BLISS</p>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+            <button class="btn" id="registerBtn" onclick="register()">Sign Up</button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+    <!-- login and registration form -->
+    <div class="form-box">
+        
+        <div class="login-container" id="login">
+            <div class="top">
+                <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span> <!-- Updated Link -->
+                <header>Login</header>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Username or Email" id="login-username">
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password" id="login-password">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <!-- Updated Submit Button with Redirect -->
+                <input type="submit" class="submit" value="Sign In" id="login-submit">
+            </div>
+            <p id="login-error" style="color: red; display: none;">Invalid email or password.</p> <!-- Error Message -->
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Forgot password?</a></label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Registration Form -->
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>Have an account? <a href="#" onclick="login()">Login</a></span> <!-- Updated Link -->
+                <header>Sign Up</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Firstname" id="firstname-register">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Lastname" id="lastname-register">
+                    <i class="bx bx-user"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" placeholder="Email" id="email-register">
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" class="input-field" placeholder="Password" id="password-register">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" class="submit" value="Register" id="register-submit">
+            </div>
+            <p id="signup-error" style="color: red; display: none;">Please fill in all fields.</p> <!--  Error Message -->
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check"> Remember Me</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Terms & conditions</a></label> 
+                </div>
+            </div>
+        </div>
+    </div>
+</div>   
+
+<!-- Javascript Internal-->
+<script> 
+// Responsive Menu
+    function myMenuFunction() { // Updated Function
+        var i = document.getElementById("navMenu");
+        if(i.className === "nav-menu") { // Updated Condition
+            i.className += " responsive"; // Updated Class
+        } else {
+            i.className = "nav-menu"; // Updated Class
+        }
+    }
+</script>
+
+<script>
+    // Login and Registration
+    var a = document.getElementById("loginBtn");
+    var b = document.getElementById("registerBtn");
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    
+    // Functions
+
+    // Login
+    function login() {
+        x.style.left = "4px";
+        y.style.right = "-520px";
+        a.className += " white-btn";
+        b.className = "btn";
+        x.style.opacity = 1;
+        y.style.opacity = 0;
+    }
+
+    // Registration
+    function register() {
+        x.style.left = "-510px";
+        y.style.right = "5px";
+        a.className = "btn";
+        b.className += " white-btn";
+        x.style.opacity = 0;
+        y.style.opacity = 1;
+    }
+
+    // Login Redirect
+    function handleLogin() {
+        window.location.href = 'matcha.html'; 
+    }
+
+    // Registration
+    document.getElementById('register-submit').addEventListener('click', async () => { // Updated Event
+    const firstn = document.getElementById('firstname-register').value.trim(); 
+    const lastn = document.getElementById('lastname-register').value.trim();
+    const email = document.getElementById('email-register').value.trim();
+    const password = document.getElementById('password-register').value.trim();
+    const error = document.getElementById('signup-error');
+
+    // Check if all fields are filled
+    if (firstn && lastn && email && password) { // Updated Condition
+        try {
+            const response = await fetch('http://localhost:4000/api/user/', { // Updated URL
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ firstn, lastn, email, password }), // Updated Body
+            });
+
+            const data = await response.json(); // Updated Response
+
+            if (response.ok) { // Updated Condition
+                alert('Sign Up Successful! Redirecting to Login page...'); // Updated Alert
+                error.style.display = 'none';
+                register();
+            } else {
+                error.textContent = data.message || 'Sign Up Failed!'; // Error Message
+                error.style.display = 'block';
+            }
+        } catch (err) {
+            error.textContent = 'An error occurred. Please try again later.'; // Error Message
+            error.style.display = 'block';
+        }
+    } else {
+        error.textContent = 'All fields are required!'; // Error Message
+        error.style.display = 'block';
+    }
+});
+
+// Login Functionality
+
+// Login
+document.getElementById('login-submit').addEventListener('click', async () => { 
+    const email = document.getElementById('login-username').value.trim();
+    const password = document.getElementById('login-password').value.trim();
+    const error = document.getElementById('login-error');
+
+    // Check if all fields are filled
+    if (email && password) { 
+        try {
+            const response = await fetch('http://localhost:4000/api/user/login', { // Updated URL
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+            });
+
+            const data = await response.json();
+
+            // Check if login was successful
+            if (response.ok) {
+                alert(`Welcome back!`);
+                error.style.display = 'none';
+                localStorage.setItem('user', JSON.stringify(data));
+
+                // Redirect to the home page
+                window.location.href = 'matcha.html'; 
+            } else {
+                error.textContent = data.message || 'Invalid email or password.'; // Error Message
+                error.style.display = 'block';
+            }
+        } catch (err) {
+            error.textContent = 'An error occurred. Please try again later.'; // Error Message
+            error.style.display = 'block';
+        }
+    } else {
+        error.textContent = 'All fields are required!';
+        error.style.display = 'block';
+    }
+});
+
+</script>
+
+</body>
+</html>

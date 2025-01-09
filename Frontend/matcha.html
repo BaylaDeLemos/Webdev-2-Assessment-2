@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matcha Bliss</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <!-- logo -->
+        <figure class="logo">
+            <img src="images/Logo.png" alt="Logo">
+        </figure>
+        <!-- navbar -->
+        <nav class="main-navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main>
+        <!-- Carousel -->
+        <section class="carousel next">
+            <div class="list">
+                <article class="item inactive_1">
+                    <div class="main-content" style="background-color: 	#bdbf65;">
+                        <div class="content">
+                            <h2>Moss & Milk</h2>
+                            <p class="price">20AED</p>
+                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+                                labore animi voluptatibus sequi illo, earum molestias explicabo officiis iste neque?
+                                Quis quod eligendi fugit, dolore nam itaque modi exercitationem voluptatem corrupti aut
+                                aspernatur. Quos non in sed ratione tenetur harum.</p>
+                            <button class="order" a href="#">Order Now</button>
+                        </div>
+                    </div>
+                    <figure class="image"><img src="images/1.png" alt="Moss and Milk Matcha">
+                        <figcaption>Moss & Milk, Matcha for a Cold Day</figcaption>
+                    </figure>
+                </article>
+                <article class="item active">
+                    <div class="main-content" style="background-color: #fbffc1;">
+                        <div class="content">
+                            <h2>Matcha Drift</h2>
+                            <p class="price">10AED</p>
+                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+                                labore animi voluptatibus sequi illo, earum molestias explicabo officiis iste neque?
+                                Quis quod eligendi fugit, dolore nam itaque modi exercitationem voluptatem corrupti aut
+                                aspernatur. Quos non in sed ratione tenetur harum.</p>
+                            <button class="order" a href="#">Order Now</button>
+                        </div>
+                    </div>
+                    <figure class="image"><img src="images/2.png" alt="Matcha Drift">
+                        <figcaption>Matcha Drift, For a Swift Day</figcaption>
+                    </figure>
+                </article>
+                <article class="item inactive_2">
+                    <div class="main-content" style="background-color: #d4973a;">
+                        <div class="content">
+                            <h2>Pure Matcha</h2>
+                            <p class="price">10AED</p>
+                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+                                labore animi voluptatibus sequi illo, earum molestias explicabo officiis iste neque?
+                                Quis quod eligendi fugit, dolore nam itaque modi exercitationem voluptatem corrupti aut
+                                aspernatur. Quos non in sed ratione tenetur harum.</p>
+                            <button class="order" a href="#">Order Now</button>
+                        </div>
+                    </div>
+                    <figure class="image"><img src="images/3.png" alt="Moss and Milk Matcha">
+                        <figcaption>Pure Matcha, The Original</figcaption>
+                    </figure>
+                </article>
+                <article class="item">
+                    <div class="main-content" style="background-color: #ffe6d1;">
+                        <div class="content">
+                            <h2>Green Whip</h2>
+                            <p class="price">15AED</p>
+                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+                                labore animi voluptatibus sequi illo, earum molestias explicabo officiis iste neque?
+                                Quis quod eligendi fugit, dolore nam itaque modi exercitationem voluptatem corrupti aut
+                                aspernatur. Quos non in sed ratione tenetur harum.</p>
+                            <button class="order" a href="#">Order Now</button>
+                        </div>
+                    </div>
+                    <figure class="image"><img src="images/4.png" alt="Moss and Milk Matcha">
+                        <figcaption>Green Whip, Creamy and Delicious</figcaption>
+                    </figure>
+                </article>
+            </div>
+            <div class="arrows">
+                <button id="prev" style="color: #607848;">&#8636;</button>
+                <button id="next" style="color: #607848;">&#8641;</button>
+            </div>
+
+        </section>
+
+        <!-- logo slider -->
+        <div class="logo-slider">
+            <div class="slider" style="
+        --width: 400px;
+        --height: 200px;
+        --quantity: 10;">
+                <div class="list">
+                    <div class="item" style="--position: 1"><img src="images/logo_s.png" alt=""></div>
+                    <div class="item" style="--position: 2"><img src="images/logo_s.png" alt=""></div>
+                    <div class="item" style="--position: 3"><img src="images/logo_s.png" alt=""></div>
+                    <div class="item" style="--position: 4"><img src="images/logo_s.png" alt=""></div>
+                    <div class="item" style="--position: 5"><img src="images/logo_s.png" alt=""></div>
+                    <div class="item" style="--position: 6"><img src="images/logo_s.png" alt=""></div>
+                    <div class="item" style="--position: 7"><img src="images/logo_s.png" alt=""></div>
+                    <div class="item" style="--position: 8"><img src="images/logo_s.png" alt=""></div>
+                    <div class="item" style="--position: 9"><img src="images/logo_s.png" alt=""></div>
+                    <div class="item" style="--position: 10"><img src="images/logo_s.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <!-- about us sec -->
+        <section id="About" class="creators">
+            <div class="row">
+                <div class="abtimg">
+                    <img src="images/girl.jpg" alt="">
+                </div>
+                <div class="abtcontent">
+                    <div class="creatorc">
+                        <span class="ctext">
+                            <span></span>Meet the Creators
+                        </span>
+                        <h2>Behind Matcha Bliss</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem similique quod
+                            aspernatur sunt laboriosam deleniti rerum aut, ab quas officiis asperiores eum quasi
+                            animi, enim ipsa eaque cupiditate nam nesciunt.</p>
+                        <a href="">Lorem Ipsum Dolor</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- about us -->
+        <section id="About" class="circle-cards">
+            <div class="card">
+                <div class="circle" style="--circ: #789048">
+                    <img src="images/M.png" class="matcha">
+                </div>
+                <div class="circle-content">
+                    <h2>Matcha Bliss</h2>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+                        labore animi voluptatibus sequi illo, earum molestias explicabo officiis iste neque?
+                        Quis quod eligendi fugit.</p>
+                    <a href="#">More</a>
+                </div>
+                <img src="images/5.png" alt="" class="circle_img">
+            </div>
+            <div class="card">
+                <div class="circle" style="--circ: #ccd5ae">
+                    <img src="images/B.png" class="matcha">
+                </div>
+                <div class="circle-content">
+                    <h2>What is Matcha?</h2>
+                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+                        labore animi voluptatibus sequi illo, earum molestias explicabo officiis iste neque?
+                        Quis quod eligendi fugit.</p>
+                    <a href="#">More</a>
+                </div>
+                <img src="images/matcha.png" alt="" class="circle_img">
+            </div>
+        </section>
+
+        <!-- blog/info -->
+        <section class="blog-section">
+            <div class="blog-card">
+                <img src="images/bowl.jpg" alt="Blog Image 1">
+                <div class="blog-content">
+                    <h2>Matcha</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum
+                        vestibulum ac leo nunc leo.</p>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <img src="images/japan.jpg" alt="Blog Image 2">
+                <div class="blog-content">
+                    <h2>Where</h2>
+                    <p>Curabitur ac leo nunc. Vestibulum et mauris vel ante finibus maximus nec ut leo. Integer
+                        consectetur volutpat nunc vitae aliquet.</p>
+                </div>
+            </div>
+
+            <div class="blog-card">
+                <img src="images/make.jpg" alt="Blog Image 3">
+                <div class="blog-content">
+                    <h2>How</h2>
+                    <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        Vestibulum ac diam sit amet quam vehicula elementum.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- logo slider -->
+        <div class="logo-slider">
+            <div class="slider" style="
+        --width: 400px;
+        --height: 200px;
+        --quantity: 10;">
+                <div class="list">
+                    <div class="item" style="--position: 1"><img src="images/logo_s.png" alt=""></div>
+                    <div class="item" style="--position: 2"><img src="images/logo_s.png" alt=""></div>
+                    <div class="item" style="--position: 3"><img src="images/logo_s.png" alt=""></div>
+                    <div class="item" style="--position: 4"><img src="images/logo_s.png" alt=""></div>
+                    <div class="item" style="--position: 5"><img src="images/logo_s.png" alt=""></div>
+                    <div class="item" style="--position: 6"><img src="images/logo_s.png" alt=""></div>
+                    <div class="item" style="--position: 7"><img src="images/logo_s.png" alt=""></div>
+                    <div class="item" style="--position: 8"><img src="images/logo_s.png" alt=""></div>
+                    <div class="item" style="--position: 9"><img src="images/logo_s.png" alt=""></div>
+                    <div class="item" style="--position: 10"><img src="images/logo_s.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- product card -->
+        <section class="pcardbg">
+            <div class="pcard">
+                <div class="product-row">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/img1.png" alt="Product 1" class="default-img">
+                            <img src="images/img4.png" alt="Product 1 Hover" class="hover-img">
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/img3.png" alt="Product 3" class="default-img">
+                            <img src="images/img6.png" alt="Product 3 Hover" class="hover-img">
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/img2.png" alt="Product 2" class="default-img">
+                            <img src="images/img5.png" alt="Product 2 Hover" class="hover-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- testimonials -->
+        <section class="testimonials">
+            <h2>Testimonials</h2>
+            <div class="tcontainer">
+                <div class="contents-wraper">
+                    <section class="testRow">
+
+                        <div class="testItem active">
+                            <img src="images/Pfp.jpeg">
+                            <h3>Random Name</h3>
+                            <h4>Location</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <div class="testItem">
+                            <img src="images/Pfp.jpeg">
+                            <h3>Bayla De Lemos</h3>
+                            <h4>Location</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <div class="testItem">
+                            <img src="images/Pfp.jpeg">
+                            <h3>Random Name</h3>
+                            <h4>Location</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <div class="testItem">
+                            <img src="images/Pfp.jpeg">
+                            <h3>Random Name</h3>
+                            <h4>Location</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+
+                        <div class="testItem">
+                            <img src="images/Pfp.jpeg">
+                            <h3>Random Name</h3>
+                            <h4>Location</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                    </section>
+                    <!-- indicators -->
+                    <section class="indicators">
+                        <div class="dot active" attr='0' onclick="switchTest(this)"></div> 
+                        <div class="dot" attr='1' onclick="switchTest(this)"></div>
+                        <div class="dot" attr='2' onclick="switchTest(this)"></div>
+                        <div class="dot" attr='3' onclick="switchTest(this)"></div>
+                        <div class="dot" attr='4' onclick="switchTest(this)"></div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="end-footer">
+            <div class="footer-container">
+                <div class="wrapper">
+                    <div class="footer-widget">
+                        <a href="#">
+                            <img src="images/mb.png" class="logo" alt="Logo" />
+                        </a>
+                        <p class="desc">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                            deserunt magni recusandae ut! Natus?
+                        </p>
+                        <ul class="socials">
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget">
+                        <h6>Quick Link</h6>
+                        <ul class="links">
+                            <li><a href="#">home</a></li>
+                            <li><a href="#">about</a></li>
+                            <li><a href="#">service</a></li>
+                            <li><a href="#">testimonial</a></li>
+                            <li><a href="#">contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget">
+                        <h6>Services</h6>
+                        <ul class="links">
+                            <li><a href="#">web design</a></li>
+                            <li><a href="#">web development</a></li>
+                            <li><a href="#">seo optimization</a></li>
+                            <li><a href="#">blog writing</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-widget">
+                        <h6>Help &amp; Support</h6>
+                        <ul class="links">
+                            <li><a href="#">support center</a></li>
+                            <li><a href="#">live chat</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">terms &amp; conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="copyright-wrapper">
+                    <p>
+                        &copy;
+                        <a href="#" target="blank">2021 Matcha. All rights reserved.</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+    <!-- script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
